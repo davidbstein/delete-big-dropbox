@@ -1,5 +1,12 @@
 import dropbox
 
+USAGE = """
+delete_folder
+
+usage:
+    python delete_folder.py <folder path> [<API key>]
+"""
+
 def delete_folder(path, dbx):
     print("deleting {}".format(path))
     try:
@@ -16,8 +23,10 @@ def delete_folder(path, dbx):
 
 if __name__ == '__main__':
     import sys
-    if len(sys.argv) < 3:
+    if len(sys.argv) == 2:
         dbx = dropbox.Dropbox(input("input your API key: "))
+        delete_folder(sys.argv[1], dbx)
+    elif len(sys.argv) == 1:
+        delete_folder(sys.argv[1], sys.argv[2])
     else:
-        dbx = dropbox.Dropbox(sys.argv[2])
-    delete_folder(sys.argv[1], dbx)
+        print(USAGE)
