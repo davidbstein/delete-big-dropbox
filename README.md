@@ -15,7 +15,7 @@ You'll need an API key - you can get it [here](https://dropbox.github.io/dropbox
 ## Run Script
 
 ### __THIS WILL DELETE EVERYTHING IN THAT FOLDER AND IS NOT UNDOABLE__
-_(well, it's kind undoable but you'll probably need to email drobox support so it'll take several days)_
+_(well, it's kinda undoable but you'll probably need to email drobox support so it'll take several days)_
 
 run the script by running the following two commands and then following the instructions.
 
